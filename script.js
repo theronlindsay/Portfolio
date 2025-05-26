@@ -1,9 +1,20 @@
 const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-links');
 
 menuIcon.addEventListener('click', () => {
   menuIcon.classList.toggle('active');
   navMenu.classList.toggle('active');
+});
+
+// Hide menu when a nav link is clicked (for mobile)
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      menuIcon.classList.remove('active');
+    }
+  });
 });
 
 // Scroll animations for portfolio cards

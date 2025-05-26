@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
     min-height: 100vh; /* Ensure body takes at least full viewport height */
     min-width: 100vw;
@@ -104,7 +108,7 @@ body {
     opacity: 0; /* Hidden by default */
     visibility: hidden; /* Not interactive when hidden */
     transition: opacity 0.5s ease, left 0.5s ease, visibility 0s linear 0.5s; /* Delay visibility change on hide */
-    background: #333;
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 8px; /* Rounded corners for floating effect */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Shadow for floating effect */
     padding: 10px 0; /* Add some padding inside the menu */
@@ -236,6 +240,19 @@ button:hover {
   white-space: pre-line;
 }
 
+
+/* Hero Section (skills and bio) */
+.hero-section {
+  /* background: rgba(0, 0, 0, 0.75); */
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow for floating effect */
+  display: flex;
+  flex-direction: row;
+}
+/* End of hero */
+
 /* Content Sections */
 .content-section {
   padding: 4rem 2rem;
@@ -255,6 +272,14 @@ button:hover {
 .content-section p {
   font-size: 1.4rem;
   line-height: 1.6;
+}
+
+
+.skills-section {
+  padding: 2rem 2rem;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 1em;
 }
 
 /* Portfolio Section */
@@ -299,12 +324,15 @@ button:hover {
   margin: 1em, 1em;
 }
 
+/* End of Portfolio */
+
+
 /* Biography Section */
 
-#biography {
-    background-color: rgba(0, 0, 0, 0.75);
+.content-section  {
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 25px;
-    margin: 3em, 10em;
+    /* margin: 3em, 10em; */
     box-shadow: 0 4px 12px rgba(0,0,0,10); /* Shadow for floating effect */
 }
 
@@ -340,11 +368,22 @@ button:hover {
 /* Responsive adjustments for content sections */
 @media screen and (min-width: 886px) {
 
-  #biography {
-    margin: 5em 8em;
+
+  .content-section {
+    /* margin: 5em 8em; */
     border-radius: 25px;
     padding: 2rem 1rem;
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .skills-section {
+    flex-direction: column;
   }
 
   .bio-container {
@@ -353,23 +392,31 @@ button:hover {
     text-align: center;
   }
 
-  .content-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 @media screen and (max-width: 886px) {
-  #biography {
-    border-radius: 0px;
-    width: 100vw;
-    min-height: 80vh;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
 
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
   }
+
+  .content-section {
+    /* border-radius: 0px; */
+    width: 95vw;
+    min-height: 80vh;
+    padding: none;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-section {
+    margin-top: 2rem;
+  }
+
   .bio-container {
     padding: 0rem;
   }
@@ -378,11 +425,6 @@ button:hover {
     font-size: 2rem;
     margin: 0;
     padding: 0;
-  }
-
-  .content-section {
-    display: flex;
-    flex-direction: column;
   }
 }
 

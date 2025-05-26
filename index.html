@@ -27,9 +27,9 @@
         <div class="bar"></div>
       </div>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#" class="nav-links">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-links">Portfolio</a></li>
-        <li class="nav-item"><a href="#" class="nav-links">Contact</a></li>
+        <li class="nav-item"><a href="#biography" class="nav-links">About</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-links">Portfolio</a></li>
+        <li class="nav-item"><a href="#bio-container" class="nav-links">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -43,23 +43,44 @@
     <div id="greeting" class="hidden"></div>
   </div> -->
 
-  <section id="biography" class="content-section">
-    <div class="bio-container">
+  <div class="hero-section">
+      <section id="biography" class="content-section">
+    <div class="bio-container" id="bio-container">
       <h2>About Me</h2>
       <img src="Images/headshot.jpg" alt="My Picture" class="bio-image">
     </div>
     <div class="bio-container">
-      <div class="socials-bar"> 
+      <div class="socials-bar" id="socials-bar"> 
         <a href="https://www.linkedin.com/in/theronl/" style="font-size: 3em; color: white;" class="social-link fa-brands fa-linkedin"></a>
         <a href="https://github.com/theronlindsay" style="font-size: 3em; color: white;" class="social-link ">
             <span  class="fa-brands fa-github"></span>
         </a>
       </div>
 
-          <p>This is a space for a brief biography. Talk about your passions, skills, and what drives you. Make it engaging and authentic!</p>
+          <p>I'm Theron Lindsay, I'm a senior at Boise State Studying Games, Interactive Media, and Mobile Technologies. I'm especially passionate about gameplay interaction systems programming, website design, and databases.  Talk about your passions, skills, and what drives you. Make it engaging and authentic!</p>
 
     </div>
   </section>
+
+  <section id="skills" class="skills-section content-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+
+      <div class="skill-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Database Management</h3>
+        <p>MySQL, MongoDB, PostgreSQL</p>
+      </div>
+
+    </div>
+  </section>
+  </div>
 
   
   <section id="portfolio" class="portfolio-section">
