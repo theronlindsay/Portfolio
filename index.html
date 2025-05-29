@@ -1,173 +1,479 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Theron Lindsay</title>
-    <!-- Fira Sans Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theron Lindsay - Portfolio</title>
   
-  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <!-- Fira Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  
+  <!-- Meta -->
   <meta name="color-scheme" content="dark">
+  
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/f11f7d3d98.js" crossorigin="anonymous"></script>
-
 </head>
 
-
-
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="navbar-container">
       <a href="#" class="navbar-logo">Theron Lindsay</a>
+      
+      <!-- Mobile Menu Icon -->
       <div class="menu-icon">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
+      
+      <!-- Navigation Menu -->
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#biography" class="nav-links">About</a></li>
-        <li class="nav-item"><a href="#skills" class="nav-links">Skills</a></li>
-        <li class="nav-item"><a href="#portfolio" class="nav-links">Portfolio</a></li>
+        <li class="nav-item">
+          <a href="#biography" class="nav-links">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-links">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-links">Portfolio</a>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- <div class="container">
-    <h1>Welcome, Student!</h1>
-    <form id="nameForm">
-      <input type="text" id="studentName" placeholder="Enter your name" required>
-      <button type="submit">Continue</button>
-    </form>
-    <div id="greeting" class="hidden"></div>
-  </div> -->
-
+  <!-- Main Content -->
   <div class="hero-section">
+    
+    <!-- About Me Section -->
     <section id="biography" class="content-section">
       <div class="bio-container" id="bio-container">
         <h2>About Me</h2>
-        <img src="Images/headshot.jpg" alt="My Picture" class="bio-image">
+        <img src="Images/headshot.jpg" alt="Theron Lindsay Profile Picture" class="bio-image">
       </div>
+      
       <div class="bio-container">
+        <!-- Social Links -->
         <div class="socials-bar" id="socials-bar"> 
-          <a href="https://www.linkedin.com/in/theronl/" style="font-size: 3em; color: white;" class="social-link fa-brands fa-linkedin"></a>
-          <a href="https://github.com/theronlindsay" style="font-size: 3em; color: white;" class="social-link ">
-            <span  class="fa-brands fa-github"></span>
+          <a href="https://www.linkedin.com/in/theronl/" 
+             style="font-size: 3em; color: white;" 
+             class="social-link fa-brands fa-linkedin"
+             aria-label="LinkedIn Profile">
+          </a>
+          <a href="https://github.com/theronlindsay" 
+             style="font-size: 3em; color: white;" 
+             class="social-link"
+             aria-label="GitHub Profile">
+            <span class="fa-brands fa-github"></span>
           </a>
         </div>
 
+        <!-- Bio Text -->
         <p>I'm Theron Lindsay, I'm a senior at Boise State Studying Games, Interactive Media, and Mobile Technologies. I'm especially passionate about gameplay interaction systems programming, UX and UI design, and game development. I have a strong foundation in web development, gameplay programming, and software engineering principles.</p>
       </div>
     </section>
-  <section id="skills" class="skills-section content-section">
-    <h2>Skills</h2>
-    <div class="skills-container">
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section content-section">
+      <h2>Skills</h2>
+      <div class="columns-container">
+        
+        <!-- Game Development Column -->
+        <div class="skills-container">
+          
+          <!-- Game Development -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="game-dev">
+              <i class="fa-solid fa-gamepad skill-icon"></i>
+              <h3>Game Development</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="game-dev">
+              <div class="skill-description">
+                <p>Experience making games in Unity and Unreal Engine with a focus on gameplay systems and interactive mechanics.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Blueprints</span>
+                <span class="tech-tag">Unity</span>
+                <span class="tech-tag">Unreal Engine</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="skill-card">
-        <i class="fa-solid fa-gamepad"></i>
-        <h3>Game Development</h3>
-        <p>Experience making games in Unity and Unreal Engine</p>
-        <p>C#, C++, Blueprints, Unreal Engine, Unity</p>
+          <!-- Shader Programming -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="shader-programming">
+              <i class="fa-solid fa-compass-drafting skill-icon"></i>
+              <h3>Material Shader Programming</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="shader-programming">
+              <div class="skill-description">
+                <p>Experience creating custom materials and shaders for enhanced visual effects in games and applications.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">Shader Graph</span>
+                <span class="tech-tag">Unreal Engine Materials</span>
+                <span class="tech-tag">HLSL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Modeling -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="3d-modeling">
+              <i class="fa-solid fa-cube skill-icon"></i>
+              <h3>3D Modeling</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="3d-modeling">
+              <div class="skill-description">
+                <p>3D asset creation and texturing for games and interactive applications.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">Blender</span>
+                <span class="tech-tag">Maya</span>
+                <span class="tech-tag">Substance Painter</span>
+                <span class="tech-tag">3D Modeling</span>
+                <span class="tech-tag">Texturing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="ui-ux">
+              <i class="fa-solid fa-palette skill-icon"></i>
+              <h3>UI/UX Design</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="ui-ux">
+              <div class="skill-description">
+                <p>User-centered design approach with focus on creating intuitive and engaging user experiences.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">User Testing</span>
+                <span class="tech-tag">Prototyping</span>
+                <span class="tech-tag">Design Systems</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- General Development Column -->
+        <div class="skills-container">
+
+          <!-- Web Development -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="web-dev">
+              <i class="fa-solid fa-code skill-icon"></i>
+              <h3>Web Development</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="web-dev">
+              <div class="skill-description">
+                <p>Full-stack web development experience building responsive and interactive web applications.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Svelte</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database Management -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="database">
+              <i class="fa-solid fa-database skill-icon"></i>
+              <h3>Database Management</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="database">
+              <div class="skill-description">
+                <p>Database design and integration experience with focus on CRUD operations and API development.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">Database Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Development -->
+          <div class="skill-dropdown">
+            <div class="skill-header" data-skill="mobile-dev">
+              <i class="fa-solid fa-mobile-screen-button skill-icon"></i>
+              <h3>Mobile Development</h3>
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <div class="skill-content" id="mobile-dev">
+              <div class="skill-description">
+                <p>Native iOS application development with modern UI frameworks and best practices.</p>
+              </div>
+              <div class="skill-technologies">
+                <span class="tech-tag">Swift</span>
+                <span class="tech-tag">SwiftUI</span>
+                <span class="tech-tag">Xcode</span>
+                <span class="tech-tag">iOS SDK</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
+    </section>
+    
+  </div> <!-- End hero-section -->
 
-      <div class="skill-card">
-        <i class="fa-solid fa-compass-drafting"></i>
-        <h3>Material Shader Programming</h3>
-        <p>Experience making materials and shaders for games</p>
-        <p>Shader Graph, Unreal Engine</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-code"></i>
-        <h3>Web Development</h3>
-        <p>Experience making reactive websites and webapps</p>
-        <p>HTML, CSS, JavaScript, React, Svelte, Node.js</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-database"></i>
-        <h3>Database Management</h3>
-        <p>Website and Database Integration with the CRUD API model</p>
-        <p>MySQL, PHP</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-mobile-screen-button"></i>
-        <h3>Mobile Development</h3>
-        <p>Experience making mobile applications for iOS</p>
-        <p>Swift and SwiftUI</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-palette"></i>
-        <h3>UI/UX Design</h3>
-        <p>Experience designing user interfaces and experiences</p>
-        <p>Figma, User Testing</p>
-      </div>
-
-      <div class="skills-card">
-        <i class="fa-solid fa-cube"></i>
-        <h3>3D Modeling</h3>
-        <p>Experience making 3D models for games and applications</p>
-        <p>Blender, Maya, Substance Painter</p>
-      </div>
-
-    </div>
-  </section>
-  </div>
-
-  
+  <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio-section">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
+      
+      <!-- Project 1: Upgrade Arena -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/FFC0CB/000000?text=Project+1" alt="Project 1">
-        <h3>Upgrade Arena</h3>
-        <p>Upgrade Arena is a Splitscreen Multiplayer Shooter built entirely by me using the Unity Game Engine. In Upgrade Arena, players control robots that get Upgraded when they lose to other players. Upgrades can add new abilities to the players gun, grant new movment abilities, or just boost stats like speed and damage. It gets chaotic quick!</p>
+        <div class="portfolio-card-header" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <img src="https://via.placeholder.com/60x60/FFC0CB/000000?text=UA" 
+               alt="Upgrade Arena Icon" 
+               class="portfolio-card-image">
+          <h3>Upgrade Arena</h3>
+          <button class="video-toggle-btn" aria-label="Show demo video">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Upgrade Arena is a Splitscreen Multiplayer Shooter built entirely by me using the Unity Game Engine. In Upgrade Arena, players control robots that get Upgraded when they lose to other players. Upgrades can add new abilities to the players gun, grant new movement abilities, or just boost stats like speed and damage. It gets chaotic quick!</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Multiplayer</span>
+            <span class="tech-tag">Game Design</span>
+          </div>
+        </div>
+        <!-- Video Player Dropdown (Initially Hidden) -->
+        <div class="portfolio-video-dropdown">
+          <div class="video-player-container">
+            <iframe 
+              src="" 
+              frameborder="0" 
+              allowfullscreen
+              title="Upgrade Arena Demo Video">
+            </iframe>
+            <button class="video-close-btn" aria-label="Close video">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+        </div>
       </div>
 
+      <!-- Project 2: Web Application -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/ADD8E6/000000?text=Project+2" alt="Project 2">
-        <h3>Project Title 2</h3>
-        <p>A short description of Project 2. What problem did it solve? What did you learn?</p>
+        <div class="portfolio-card-header" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <i class="fa-solid fa-globe portfolio-card-icon"></i>
+          <h3>Web Application Project</h3>
+          <button class="video-toggle-btn" aria-label="Show demo video">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>A full-stack web application featuring modern UI design and robust backend functionality. Built with responsive design principles and user experience in mind.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+        <!-- Video Player Dropdown (Initially Hidden) -->
+        <div class="portfolio-video-dropdown">
+          <div class="video-player-container">
+            <iframe 
+              src="" 
+              frameborder="0" 
+              allowfullscreen
+              title="Web Application Demo Video">
+            </iframe>
+            <button class="video-close-btn" aria-label="Close video">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 3: Mobile App -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <i class="fa-solid fa-mobile-screen-button portfolio-card-icon"></i>
+          <h3>iOS Mobile Application</h3>
+          <button class="video-toggle-btn" aria-label="Show demo video">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Native iOS application developed with SwiftUI, featuring intuitive user interface and seamless user experience. Focuses on modern mobile design patterns.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">Swift</span>
+            <span class="tech-tag">SwiftUI</span>
+            <span class="tech-tag">iOS SDK</span>
+            <span class="tech-tag">Xcode</span>
+          </div>
+        </div>
+        <!-- Video Player Dropdown (Initially Hidden) -->
+        <div class="portfolio-video-dropdown">
+          <div class="video-player-container">
+            <iframe 
+              src="" 
+              frameborder="0" 
+              allowfullscreen
+              title="iOS Mobile Application Demo Video">
+            </iframe>
+            <button class="video-close-btn" aria-label="Close video">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 4: 3D Visualization -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+          <i class="fa-solid fa-cube portfolio-card-icon"></i>
+          <h3>3D Visualization Tool</h3>
+          <button class="video-toggle-btn" aria-label="Show demo video">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Interactive 3D visualization tool for data representation. Features custom shaders and materials for enhanced visual appeal and user interaction.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">Blender</span>
+            <span class="tech-tag">HLSL</span>
+            <span class="tech-tag">3D Modeling</span>
+            <span class="tech-tag">Shader Programming</span>
+          </div>
+        </div>
+        <!-- Video Player Dropdown (Initially Hidden) -->
+        <div class="portfolio-video-dropdown">
+          <div class="video-player-container">
+            <iframe 
+              src="" 
+              frameborder="0" 
+              allowfullscreen
+              title="3D Visualization Tool Demo Video">
+            </iframe>
+            <button class="video-close-btn" aria-label="Close video">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 5: Database System -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header">
+          <i class="fa-solid fa-database portfolio-card-icon"></i>
+          <h3>Database Management System</h3>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Comprehensive database management system with CRUD operations and API integration. Features user authentication and data security measures.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">Database Design</span>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 6: UI/UX Design Project -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header">
+          <i class="fa-solid fa-palette portfolio-card-icon"></i>
+          <h3>UI/UX Design Portfolio</h3>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>User experience design project focusing on intuitive interface design and user-centered design principles. Includes prototyping and user testing.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">Prototyping</span>
+            <span class="tech-tag">User Testing</span>
+            <span class="tech-tag">Design Systems</span>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 7: Game Development Tool -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header">
+          <i class="fa-solid fa-gamepad portfolio-card-icon"></i>
+          <h3>Game Development Tool</h3>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Custom tool for game developers featuring automated workflows and enhanced productivity features. Built to streamline the game development process.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Tool Development</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+        </div>
       </div>
+      
+      <!-- Project 8: Shader Collection -->
       <div class="portfolio-card">
-        <img src="https://via.placeholder.com/300x200/90EE90/000000?text=Project+3" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>A short description of Project 3. Mention any collaborators or unique challenges.</p>
+        <div class="portfolio-card-header">
+          <i class="fa-solid fa-compass-drafting portfolio-card-icon"></i>
+          <h3>Shader Collection</h3>
+        </div>
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-description">
+            <p>Collection of custom shaders and materials for enhanced visual effects in games and applications. Features various lighting and texture techniques.</p>
+          </div>
+          <div class="portfolio-card-technologies">
+            <span class="tech-tag">Shader Graph</span>
+            <span class="tech-tag">HLSL</span>
+            <span class="tech-tag">Material Design</span>
+            <span class="tech-tag">Visual Effects</span>
+          </div>
+        </div>
       </div>
-      <!-- Add more portfolio cards as needed -->
+      
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
-</body>
 
+</body>
 </html>

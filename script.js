@@ -38,3 +38,107 @@ const observer = new IntersectionObserver((entries, observer) => {
 portfolioCards.forEach(card => {
   observer.observe(card);
 });
+
+// Skills dropdown functionality
+const skillHeaders = document.querySelectorAll('.skill-header');
+
+skillHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const skillId = header.getAttribute('data-skill');
+    const skillContent = document.getElementById(skillId);
+    const dropdownArrow = header.querySelector('.dropdown-arrow');
+    
+    // Toggle active states
+    header.classList.toggle('active');
+    skillContent.classList.toggle('active');
+    
+    // Close other dropdowns (optional - uncomment for accordion behavior)
+    // skillHeaders.forEach(otherHeader => {
+    //   if (otherHeader !== header) {
+    //     const otherSkillId = otherHeader.getAttribute('data-skill');
+    //     const otherSkillContent = document.getElementById(otherSkillId);
+    //     otherHeader.classList.remove('active');
+    //     otherSkillContent.classList.remove('active');
+    //   }
+    // });
+  });
+});
+
+// Video player functionality for portfolio cards
+const videoToggleBtns = document.querySelectorAll('.video-toggle-btn');
+const videoCloseBtns = document.querySelectorAll('.video-close-btn');
+
+videoToggleBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    
+    const portfolioCard = btn.closest('.portfolio-card');
+    const header = btn.closest('.portfolio-card-header');
+    const dropdown = portfolioCard.querySelector('.portfolio-video-dropdown');
+    const iframe = dropdown.querySelector('iframe');
+    const videoUrl = header.getAttribute('data-video');
+    
+    // Close any other open video dropdowns
+    document.querySelectorAll('.portfolio-video-dropdown.active').forEach(activeDropdown => {
+      if (activeDropdown !== dropdown) {
+        activeDropdown.classList.remove('active');
+        activeDropdown.closest('.portfolio-card').querySelector('.video-toggle-btn').classList.remove('active');
+        // Clear the iframe src to stop video
+        activeDropdown.querySelector('iframe').src = '';
+      }
+    });
+    
+    // Toggle current dropdown
+    const isActive = dropdown.classList.contains('active');
+    
+    if (isActive) {
+      // Close dropdown
+      dropdown.classList.remove('active');
+      btn.classList.remove('active');
+      iframe.src = ''; // Stop video by clearing src
+    } else {
+      // Open dropdown
+      dropdown.classList.add('active');
+      btn.classList.add('active');
+      iframe.src = videoUrl; // Load video
+    }
+  });
+});
+
+videoCloseBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    
+    const portfolioCard = btn.closest('.portfolio-card');
+    const dropdown = portfolioCard.querySelector('.portfolio-video-dropdown');
+    const toggleBtn = portfolioCard.querySelector('.video-toggle-btn');
+    const iframe = dropdown.querySelector('iframe');
+    
+    // Close dropdown
+    dropdown.classList.remove('active');
+    toggleBtn.classList.remove('active');
+    iframe.src = ''; // Stop video by clearing src
+  });
+});
+
+// Close video dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.portfolio-card')) {
+    document.querySelectorAll('.portfolio-video-dropdown.active').forEach(dropdown => {
+      dropdown.classList.remove('active');
+      dropdown.closest('.portfolio-card').querySelector('.video-toggle-btn').classList.remove('active');
+      dropdown.querySelector('iframe').src = '';
+    });
+  }
+});
+
+// Close video dropdowns when pressing Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.portfolio-video-dropdown.active').forEach(dropdown => {
+      dropdown.classList.remove('active');
+      dropdown.closest('.portfolio-card').querySelector('.video-toggle-btn').classList.remove('active');
+      dropdown.querySelector('iframe').src = '';
+    });
+  }
+});
