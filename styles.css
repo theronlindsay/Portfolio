@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -16,6 +20,9 @@ body {
     background-size: cover;
     padding-top: 80px; /* Adjusted for floating navbar: navbar height 60px + top offset 10px + 10px breathing room */
     color: #fff;
+    /* Ensure smooth scrolling behavior */
+    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 .navbar {
@@ -263,7 +270,7 @@ button:hover {
   text-align: center;
   max-width: 1300px;
   margin: 1em; /* Center horizontally */
-  min-height: 90vh;
+  min-height: 40vh;
   backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
@@ -653,7 +660,6 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   .hero-section {
     padding: 0 2rem;
   }
-
   .content-section {
     /* margin: 5em 8em; */
     border-radius: 25px;
@@ -712,13 +718,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
     padding: 0 1rem;
   }
-
   .content-section {
     /* border-radius: 0px; */
     width: 95vw;
-    min-height: 80vh;
-    padding: none;
-    margin: 0;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
